@@ -1,0 +1,18 @@
+[package]
+name = "international_shipper"
+version = "0.1.0"
+edition = "2021"
+default-run = "international_shipper"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+diesel = { version = "2.0.0", features = ["postgres", "uuid", "r2d2"] }
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+dotenvy = "0.15"
+serde = "1.0.149"
+serde_json = "1.0.89"
+uuid = { version = "1.2.2", features = ["serde"] }
+headless_chrome = {git = "https://github.com/atroche/rust-headless-chrome", features = ["fetch"]}
+reqwest = { version = "0.11.13", features = ["multipart"] }
+tokio = { version = "1", features = ["full"] }
+csv = "1.1"
